@@ -8,15 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+
     <title>demo</title>
   </head>
-  <body>
+  <body class="bg-light">
 
-    <div class="container bg-light p-4">
-        <h1 class="text-uppercase text-center">image classifier app</h1><br>
+
+    <div class="container p-4">
+        <h4 class="text-uppercase text-center font-weight-bold">image classifier app</h4><br>
+        <ul class="list-group">
+          <li class="list-group-item active text-uppercase">Things you can do with the classifier app</li>
+          <li class="list-group-item">Find the breed of dog, Find the type of flower, Find the type of fruit and much more.</li>
+      </ul><br><br>
         <div class="card">
           <div class="card-body">
-            <h3 class="text-uppercase text-center">Usage</h3>
+            <h5 class="text-uppercase text-center">Usage</h5>
             <p>Click Browse and upload an image file. Supported format types are <bold><em>jpeg, jpg, and png.</em> </bold>Once done upload, click on predict button and you will see the predictions.</p>
             </div>
         </div><br><br>
@@ -31,7 +38,7 @@
                      <span aria-hidden="true">&times;</span>
                      </button>
                  </div>
-                 
+
               {% endfor %}
            {% endif %}
         {% endwith %}
@@ -49,7 +56,8 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block text-uppercase">predict</button>
             <br>
-            <p class="text-uppercase text-center">Developed by aaditya ghag</p>
+            <p class="text-center text-uppercase">Developed by aaditya ghag</p>
+            <p class="text-center text-primary"><a href="https://github.com/imaaditya-stack/Image-Classifier-Flask-App">View Source Code</a></p>
         </form>
     </div>
 
