@@ -45,7 +45,7 @@ def prepare_image(path):
     return preprocess_input(img_array_expanded_dims)
 
 
-@app.route('/demo', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 
 def predict():
 
