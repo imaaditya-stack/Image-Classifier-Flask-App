@@ -12,13 +12,13 @@ from keras.metrics import categorical_crossentropy
 from keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image
 from keras.applications.imagenet_utils import decode_predictions
-from keras.applications.mobilenet import preprocess_input, MobileNet
+from keras.applications.mobilenet_v2 import preprocess_input, MobileNetV2
 
 import numpy as np
 import os
 
 #Loading MobileNet Pretrained Model
-model = MobileNet(include_top=True, weights='imagenet')
+model = MobileNetV2(include_top=True, weights='imagenet')
 
 model._make_predict_function()
 
